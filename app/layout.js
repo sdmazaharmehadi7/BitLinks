@@ -36,6 +36,9 @@ export const metadata = {
   authors: [{ name: "BitLinks Team" }],
   creator: "BitLinks",
   publisher: "BitLinks",
+  verification: {
+  google: "BSNRaxyNYwPNCYTEiD4No5rRHNVnEBXj_ds-BgLJy38",
+},
   formatDetection: {
     email: false,
     address: false,
