@@ -90,12 +90,24 @@ export const viewport = {
 }
 
 export default function RootLayout({ children }) {
+  const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "BitLinks",
+  url: siteUrl,
+}
   return (
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans bg-slate-50 text-slate-900 selection:bg-indigo-500 selection:text-white">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLd),
+          }}
+        />
         <Navbar />
         {children}
         <Footer />
